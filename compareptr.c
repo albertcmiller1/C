@@ -7,22 +7,21 @@ int main () {
    int  arr[] = {10, 100, 200};
    int  i, *ptr;
 
-   /* let us have array address in pointer */
+   /* let us have address of the first element in pointer */
    ptr = arr;
+   i = 0;
 
 
-   for (i = 0; i < MAX; i++) {
+   // only increment if the ptr value is less than or equal to the currenet ptr value   
+   while ( ptr <= &arr[MAX - 1] ) {
+
       printf("Address of arr[%d] = %d\n", i, ptr );
       printf("Value of arr[%d] = %d\n", i, *ptr );
-      printf("\n");
-      printf("\n");
-      /* move to the next location */
-      ptr++;
-   }
- 
 
-   printf("\n");
-   printf("\n");
-   printf("the int type is 32 bit. 32/8=4 memoroy cells used.");
+      /* point to the next location */
+      ptr++;
+      i++;
+   }
+	
    return 0;
 }

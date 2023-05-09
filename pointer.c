@@ -12,5 +12,3 @@ int main () {
 	printf("value of *age_ptr:        %d\n", *age_ptr);
 	return 0;
 }
-
-
